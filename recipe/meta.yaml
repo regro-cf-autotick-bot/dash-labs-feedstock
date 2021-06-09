@@ -1,5 +1,5 @@
 {% set name = "dash-labs" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -10,7 +10,7 @@ source:
   # v0.2.0 sdist on pypi is invalid and doesn't include requirements.txt
   # Install from github archive
   url: https://github.com/plotly/dash-labs/archive/v{{ version }}.tar.gz
-  sha256: 7f7b77881476059206e45e38360afe34ab3b5ff2e2ca94a90ffd6ae239b1970c
+  sha256: 7d35d9dcea7cb3dd20bfef9ce713114cffa1a278ddb161b52b0a225f680ef0b7
 build:
   number: 0
   noarch: python
@@ -23,7 +23,7 @@ requirements:
   run:
     - dash >=1.18.1
     - dash-bootstrap-components >=0.11.1
-    - dataclasses >=0.8 
+    - dataclasses >=0.8
     - python >=3.6
 
 test:
