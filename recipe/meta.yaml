@@ -1,5 +1,5 @@
 {% set name = "dash-labs" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 
 package:
@@ -7,10 +7,10 @@ package:
   version: {{ version }}
 
 source:
-  # v0.2.0 sdist on pypi is invalid and doesn't include requirements.txt
-  # Install from github archive
-  url: https://github.com/plotly/dash-labs/archive/v{{ version }}.tar.gz
-  sha256: 7d35d9dcea7cb3dd20bfef9ce713114cffa1a278ddb161b52b0a225f680ef0b7
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dash-labs-{{ version }}.tar.gz
+    sha256: ca8fc8be369aa6cd20a3016764e12a0d8b66a5caf549b3b001a5981eead5eccb
+  - path: requirements.txt
+
 build:
   number: 0
   noarch: python
