@@ -1,5 +1,5 @@
 {% set name = "dash-labs" %}
-{% set version = "0.4.0" %}
+{% set version = "1.0.1" %}
 
 
 package:
@@ -9,7 +9,7 @@ package:
 # Upstream package doesn't include requirements.txt in sdist
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dash-labs-{{ version }}.tar.gz
-    sha256: ca8fc8be369aa6cd20a3016764e12a0d8b66a5caf549b3b001a5981eead5eccb
+    sha256: 9ff04ddb50a7d07b0fd84ea41d5320f97df03567b5403e3f01f31a7542f54a7e
   - path: requirements.txt
 
 build:
