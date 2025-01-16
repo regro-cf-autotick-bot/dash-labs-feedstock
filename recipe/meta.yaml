@@ -8,24 +8,24 @@ package:
 
 # Upstream package doesn't include requirements.txt in sdist
 source:
-  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dash-labs-{{ version }}.tar.gz
+  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/dash-labs-{{ version }}.tar.gz
     sha256: ca8fc8be369aa6cd20a3016764e12a0d8b66a5caf549b3b001a5981eead5eccb
   - path: requirements.txt
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - dash >=1.18.1
     - dash-bootstrap-components >=0.11.1
     - dataclasses >=0.8
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/plotly/dash-labs
